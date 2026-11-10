@@ -1,0 +1,401 @@
+
+/* Reset básico para márgenes y caja (Corregido el error de sintaxis inicial) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal del header */
+.main-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Franja superior celeste con logo centrado */
+.logo-container {
+    background-color: #7ee5ff; /* Ajustado al celeste de la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 120px; 
+    height: auto;
+}
+
+/* Franja inferior azul con menú y buscador */
+.navbar {
+    background-color: #0cbbe4; /* Azul intermedio ajustado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+}
+
+/* Lista de botones de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ffffff; /* Texto blanco como en la imagen */
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid #ffffff; /* Borde blanco */
+    padding: 6px 15px;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links li a:hover {
+    background-color: #ffffff;
+    color: #0cbbe4;
+}
+
+/* Contenedor del buscador */
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    padding: 6px 12px;
+    border: none;
+    outline: none;
+    width: 200px;
+    border-radius: 2px 0 0 2px;
+    font-size: 14px;
+    color: #333;
+}
+
+.search-box button {
+    background-color: #0087a8; /* Lupa azul ligeramente oscuro */
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 2px 2px 0;
+}
+
+.search-icon {
+    width: 14px;
+    height: 14px;
+    filter: invert(1);
+}
+
+/* --- SECCIONES PRINCIPALES --- */
+
+.hero-container {
+    background-color: #bdf0ff; /* Celeste claro del cuerpo de la web */
+    padding: 30px 5%; 
+    display: flex;
+    justify-content: center;
+}
+
+.hero-banner {
+    position: relative; 
+    background-color: #0cbbe4; 
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover; 
+    object-position: center top;
+}
+
+.hero-text-box {
+    position: absolute;
+    bottom: 25px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: rgba(255, 255, 255, 0.95); 
+    width: 85%; 
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.hero-text-box h2 {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.hero-text-box p {
+    font-size: 14px;
+    color: #222222;
+    line-height: 1.5;
+}
+
+/* --- CUADRÍCULA DE NOTICIAS --- */
+
+.news-section {
+    background-color: #bdf0ff; 
+    padding: 20px 5% 40px 5%;
+    display: flex;
+    justify-content: center; 
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    max-width: 1000px;
+    width: 100%;
+}
+
+.news-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: calc(33.333% - 13.5px);
+}
+
+.card-image {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover; 
+}
+
+.image-wrapper-blue {
+    background-color: #0cbbe4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    overflow: hidden;
+}
+
+.image-wrapper-blue .card-image {
+    object-fit: contain; 
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-content p {
+    font-size: 13px;
+    font-weight: 700; 
+    text-align: center;
+    color: #000;
+    line-height: 1.4;
+}
+
+/* --- BANNER DE ZELDA --- */
+
+.feature-container {
+    background-color: #bdf0ff; 
+    padding: 0 5% 40px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-banner {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.feature-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.feature-text-box {
+    position: absolute;
+    bottom: 25px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: rgba(255, 255, 255, 0.9); 
+    width: 85%;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.feature-text-box h2 {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 8px;
+    font-weight: 900;
+}
+
+.feature-text-box p {
+    font-size: 14px;
+    color: #222;
+    line-height: 1.5;
+}
+
+/* --- NOTICIAS MIXTAS --- */
+
+.mixed-news-section {
+    background-color: #bdf0ff;
+    padding: 0 5% 40px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.mixed-news-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.small-cards-column {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    width: 45%; 
+}
+
+.small-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px); 
+}
+
+.small-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.small-card-content {
+    padding: 12px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.small-card-content p {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    line-height: 1.3;
+}
+
+.large-card-column {
+    width: 55%; 
+    display: flex;
+}
+
+.large-card {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.large-image-wrapper {
+    background-color: #0cbbe4;
+    width: 100%;
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+}
+
+.large-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.large-card-content {
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+}
+
+.large-card-content p {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    line-height: 1.4;
+}
+
+/* --- PIE DE PÁGINA (FOOTER) --- */
+
+.site-footer {
+    background-color: #7ee5ff; 
+    padding: 40px 10%; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 800px; /* Reducido para juntar más los bloques como en la foto */
+    margin: 0 auto;
+    gap: 30px;
+
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+.footer-column p {
+    font-size: 14px;
+    font-weight: 700; 
+    color: #000000;
+}
+
+.social-wrapper {
+    display: flex;
+    align-items: center; 
+    gap: 15px; 
+    margin-top: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; 
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border-radius: 50%; /* Asegura efecto de iconos circulares */
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
